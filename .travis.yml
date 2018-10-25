@@ -9,5 +9,5 @@ cache:
 install:
   - npm install
 script:
-  - npm test:coverage
+  - npm run test:coverage
   - npm run lint
