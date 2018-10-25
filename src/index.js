@@ -8,10 +8,11 @@ const uploadHandler = require('./routes/upload.js');
 
 
 const app = express();
+const logger = morgan('combined');
 app.use(fileUpload());
 
-if(config.util.getEnv('NODE_ENV') !== 'test') {
-    app.use(morgan('combined'));
+if (config.util.getEnv('NODE_ENV') !== 'test') {
+  app.use(logger);
 }
 
 app.get('/', homeHandler);

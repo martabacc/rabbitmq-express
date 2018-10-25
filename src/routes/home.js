@@ -1,7 +1,5 @@
-const homeHandler = (req, res) => {
-  return res.json({
-    message: 'Hello From ImageCompacter service'
-  });
-};
+const homeHandler = (req, res) => res.json({
+  message: 'Hello From ImageCompacter service',
+});
 
 module.exports = homeHandler;
