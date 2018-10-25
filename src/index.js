@@ -18,3 +18,5 @@ app.get('/', homeHandler);
 app.post('/upload', uploadHandler);
 
 app.listen(4000, () => console.log('Example app listening on port 4000!'));
+
+module.exports = app;
