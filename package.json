@@ -1,0 +1,27 @@
+{
+  "name": "rabbitmq-express",
+  "version": "1.0.0",
+  "description": "Mini project to learn Message Broker mechanism with nodejs",
+  "main": "index.js",
+  "dependencies": {
+    "amqplib": "^0.5.2",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.0.0",
+    "imagemin": "^6.0.0",
+    "imagemin-pngquant": "^6.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronayumik/rabbitmq-express.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ronayumik/rabbitmq-express/issues"
+  },
+  "homepage": "https://github.com/ronayumik/rabbitmq-express#readme"
+}
