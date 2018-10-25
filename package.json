@@ -2,17 +2,33 @@
   "name": "rabbitmq-express",
   "version": "1.0.0",
   "description": "Mini project to learn Message Broker mechanism with nodejs",
-  "main": "index.js",
+  "main": "src/index.js",
   "dependencies": {
     "amqplib": "^0.5.2",
+    "config": "^2.0.1",
     "express": "^4.16.4",
     "express-fileupload": "^1.0.0",
     "imagemin": "^6.0.0",
-    "imagemin-pngquant": "^6.0.0"
+    "imagemin-pngquant": "^6.0.0",
+    "morgan": "^1.7.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "mocha": "^2.4.5",
+    "nyc": "^13.1.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=dev && node src/index.js",
+    "test": "mocha test/**/*.test.js --timeout 10000",
+    "test:coverage": "nyc --reporter=html -x src/index.js --reporter=text mocha test/**/*.test.js",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src"
   },
   "repository": {
     "type": "git",
